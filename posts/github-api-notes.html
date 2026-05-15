@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>前端拉取 GitHub 公开仓库列表 · shenshuo-maker</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#article">跳到正文</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="https://avatars.githubusercontent.com/u/237758329?v=4" width="36" height="36" alt="" />
+          <span>shenshuo-maker 技术笔记</span>
+        </a>
+        <nav class="nav">
+          <a href="../index.html#posts">文章</a>
+          <a href="../index.html#projects">项目</a>
+        </nav>
+      </div>
+    </header>
+
+    <main style="max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px">
+      <a class="back-link" href="../index.html#posts">← 返回文章列表</a>
+      <article id="article" class="prose">
+        <h1>前端拉取 GitHub 公开仓库列表</h1>
+        <p class="meta">发布于 2026-05-15 · 标签：GitHub API / JavaScript</p>
+
+        <p>
+          GitHub 提供无需鉴权即可访问的 REST 接口，例如列出某用户的公开仓库：
+        </p>
+        <pre><code>GET https://api.github.com/users/USERNAME/repos?per_page=100&amp;sort=updated</code></pre>
+
+        <p>
+          浏览器端直接 <code>fetch</code> 时，需要页面通过 <code>https:</code> 提供，以便与 API 的安全上下文一致；本地用 <code>file://</code> 打开时，部分环境可能拦截跨域或混合内容，因此推荐用本地静态服务器或部署后再预览。
+        </p>
+
+        <h2>排序与展示</h2>
+        <p>
+          API 返回的每条记录包含 <code>pushed_at</code>、<code>updated_at</code>、<code>language</code>、<code>description</code>、<code>topics</code> 等字段。本博客在客户端按推送时间降序排序，让最近有提交的仓库排在前面。
+        </p>
+
+        <h2>离线回退</h2>
+        <p>
+          在 <code>assets/app.js</code> 中的 <code>FALLBACK_REPOS</code> 保存了一份与当前公开仓库同步的快照。当 API 不可用时，页面仍能展示项目卡片；你只需在新增重要仓库后偶尔更新该数组即可。
+        </p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../index.html">返回首页</a></p>
+    </footer>
+  </body>
+</html>

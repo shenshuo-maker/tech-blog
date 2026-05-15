@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>搭建这个静态技术博客 · shenshuo-maker</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#article">跳到正文</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../index.html">
+          <img class="brand-mark" src="https://avatars.githubusercontent.com/u/237758329?v=4" width="36" height="36" alt="" />
+          <span>shenshuo-maker 技术笔记</span>
+        </a>
+        <nav class="nav">
+          <a href="../index.html#posts">文章</a>
+          <a href="../index.html#projects">项目</a>
+        </nav>
+      </div>
+    </header>
+
+    <main style="max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px">
+      <a class="back-link" href="../index.html#posts">← 返回文章列表</a>
+      <article id="article" class="prose">
+        <h1>搭建这个静态技术博客</h1>
+        <p class="meta">发布于 2026-05-15 · 标签：静态站点 / GitHub</p>
+
+        <p>
+          本博客是一个零构建步骤的静态站点：根目录的 <code>index.html</code> 负责首页，<code>assets/style.css</code> 负责样式，<code>assets/app.js</code> 在浏览器中请求
+          GitHub 公开 API 以列出你的仓库；若网络或 CORS 环境不允许，会回退到脚本里内置的仓库列表。
+        </p>
+
+        <h2>如何修改文案与头像</h2>
+        <p>编辑 <code>index.html</code> 中「关于」「文章」等段落即可。头像默认使用 GitHub 用户 id 对应的头像 URL，脚本也会在可用时覆盖为 API 返回的最新头像。</p>
+
+        <h2>如何新增文章</h2>
+        <p>复制 <code>posts/</code> 下任意一篇 HTML，修改标题与正文，然后在首页 <code>index.html</code> 的「文章」区块增加一条链接。</p>
+
+        <h2>部署到 GitHub Pages</h2>
+        <ol>
+          <li>将 <code>tech-blog</code> 文件夹推送到任意 GitHub 仓库（可作为仓库根目录或子目录）。</li>
+          <li>在仓库 Settings → Pages 中选择分支与目录（若站点在子目录，可使用 GitHub Actions 将 <code>tech-blog</code> 发布到 <code>gh-pages</code>，或把该文件夹内容放到根目录）。</li>
+          <li>启用 HTTPS 后，首页即可通过 <code>fetch</code> 正常访问 <code>api.github.com</code>。</li>
+        </ol>
+
+        <p>若你希望用 Markdown 写作，可以后续接入 Eleventy、Astro 等静态生成器；当前版本刻意保持简单，便于快速上线与改版。</p>
+      </article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="../index.html">返回首页</a></p>
+    </footer>
+  </body>
+</html>
