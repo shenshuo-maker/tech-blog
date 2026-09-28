@@ -3,108 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="shenshuo-maker 的个人技术博客与开源项目索引" />
-    <title>shenshuo-maker · 技术笔记</title>
+    <meta
+      name="description"
+      content="沈硕 · 中山大学 2028 届 · AI Infra 实习：隔离沙箱、压测、离线交付"
+    />
+    <title>沈硕 · AI Infra</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="icon" href="assets/avatar.png" />
   </head>
   <body>
-    <a class="skip-link" href="#main">跳到正文</a>
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="index.html">
-          <img
-            id="avatar"
-            class="brand-mark"
-            src="https://avatars.githubusercontent.com/u/237758329?v=4"
-            width="36"
-            height="36"
-            alt="GitHub 头像"
-          />
-          <span>shenshuo-maker 技术笔记</span>
-        </a>
-        <nav class="nav" aria-label="主导航">
-          <a href="#about">关于</a>
-          <a href="#posts">文章</a>
-          <a href="#projects">项目</a>
-          <a href="https://github.com/shenshuo-maker" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </nav>
-      </div>
+    <header class="nav">
+      <a class="brand" href="#top">SHEN SHUO</a>
+      <nav>
+        <a href="#story">经历</a>
+        <a href="#work">作品</a>
+        <a href="#talk">面试怎么讲</a>
+        <a href="https://github.com/shenshuo-maker/sandbench">sandbench</a>
+      </nav>
     </header>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div>
-          <h1 id="hero-title">用代码记录学习与实验</h1>
-          <p>
-            这里是 <strong>shenshuo-maker</strong> 的个人技术主页：整理公开仓库、写简短笔记、沉淀可复用的思路。页面会在支持的环境下自动从
-            GitHub 拉取最新仓库列表。
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://github.com/shenshuo-maker" target="_blank" rel="noopener noreferrer">在 GitHub 关注我</a>
-            <a class="btn" href="#projects">浏览全部项目</a>
-          </div>
-        </div>
-        <aside class="hero-card" aria-label="账号概览">
-          <h2>公开主页</h2>
-          <div class="stat-row">
-            <div>GitHub 公开仓库 <span id="gh-public-repos">—</span> 个</div>
-            <div>本页展示 <span id="public-repo-count">—</span> 个</div>
-          </div>
-          <p class="status-msg" style="margin-top: 16px; margin-bottom: 0">
-            将本目录部署到 GitHub Pages 或任意静态托管后，即可通过 HTTPS 正常调用公开 API。
-          </p>
-        </aside>
-      </section>
-
-      <section id="about" class="section" aria-labelledby="about-title">
-        <div class="section-head">
-          <h2 id="about-title">关于</h2>
-          <p>可在此替换为你的个人简介、技术栈与联系方式。</p>
-        </div>
-        <p style="max-width: 720px; color: var(--muted); margin: 0">
-          我主要关注后端与数据相关方向（例如 Java、Python），也会做一些研究与原型验证。下面的「项目」区块会列出
-          <a href="https://github.com/shenshuo-maker" target="_blank" rel="noopener noreferrer">github.com/shenshuo-maker</a>
-          下的公开仓库；若你之后新建仓库，只要保持公开，刷新页面即可看到。
+    <main id="top">
+      <section class="hero">
+        <img class="avatar" src="assets/avatar.png" alt="沈硕" width="96" height="96" />
+        <p class="eyebrow">中山大学 · 信管 · 2028 届</p>
+        <h1>沈硕<span>AI Infra 实习生</span></h1>
+        <p class="lead">
+          给不可信代码加配额、把生命周期压测清楚、跑完不留容器。暑期在华为 2012
+          实验室做过鲲鹏 ARM64 离线沙箱；公开练习是
+          <a href="https://github.com/shenshuo-maker/sandbench">sandbench</a>。
         </p>
-      </section>
-
-      <section id="posts" class="section" aria-labelledby="posts-title">
-        <div class="section-head">
-          <h2 id="posts-title">文章</h2>
-          <p>静态 HTML 文章，可直接复制模板新增。</p>
-        </div>
-        <div class="post-list">
-          <article class="post-item">
-            <div>
-              <h3><a href="posts/hello-blog.html">搭建这个静态技术博客</a></h3>
-              <p>目录结构、如何改文案、如何部署到 GitHub Pages。</p>
-            </div>
-            <time class="post-date" datetime="2026-05-15">2026-05-15</time>
-          </article>
-          <article class="post-item">
-            <div>
-              <h3><a href="posts/github-api-notes.html">前端拉取 GitHub 公开仓库列表</a></h3>
-              <p>公开 API、排序字段与离线回退数据的设计要点。</p>
-            </div>
-            <time class="post-date" datetime="2026-05-15">2026-05-15</time>
-          </article>
+        <p class="meta">城市不限 · 日常 / 暑期 · 主投容器、稳定性、评测环境、基础架构</p>
+        <div class="actions">
+          <a class="btn primary" href="https://github.com/shenshuo-maker">GitHub</a>
+          <a class="btn" href="mailto:abc300739@qq.com">abc300739@qq.com</a>
         </div>
       </section>
 
-      <section id="projects" class="section" aria-labelledby="projects-title">
-        <div class="section-head">
-          <h2 id="projects-title">开源项目</h2>
-          <p>自动同步自 GitHub · 离线时显示内置列表</p>
+      <section id="story">
+        <h2>一段能讲 8 分钟的经历</h2>
+        <div class="grid">
+          <article>
+            <h3>华为 2012 实验室 · 2026.07–09</h3>
+            <p>
+              岗位写的是大模型应用，实际做的是隔离代码执行环境：E2B 在 ARM
+              离线环境交不出去，切换 Cube-Sandbox；配 CPU/内存/网络配额；50/500
+              梯度压测；定位残留、超时、408/500。知识库 RAG 是评测底座上的配套，不是主线。
+            </p>
+          </article>
+          <article>
+            <h3>为什么不是「只会沙箱」</h3>
+            <p>
+              面试官要的是隔离、失败分类、泄漏、可复现压测。映射到容器、K8s、稳定性、推理平台都成立。应用仓还在 GitHub，Infra
+              请先看 sandbench。
+            </p>
+          </article>
         </div>
-        <div id="repo-grid" class="grid" aria-live="polite"></div>
-        <p id="repo-status" class="status-msg" role="status"></p>
+      </section>
+
+      <section id="work">
+        <h2>给面试官点的链接</h2>
+        <ul class="cards">
+          <li>
+            <a href="https://github.com/shenshuo-maker/sandbench">
+              <strong>sandbench</strong>
+              <span>隔离执行 + 创建/执行/销毁压测 · leftover=0</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/shenshuo-maker">
+              <strong>GitHub 主页</strong>
+              <span>置顶 Infra，应用项目降级展示</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/shenshuo-maker/algorithm-check-system">
+              <strong>省级大创</strong>
+              <span>算法备案文本合规检测 · 负责人</span>
+            </a>
+          </li>
+        </ul>
+        <p class="note">华数杯数学建模国家二等奖 · GPA 3.6/4.0</p>
+      </section>
+
+      <section id="talk">
+        <h2>你可以直接问我</h2>
+        <ol>
+          <li>沙箱超时之后容器为什么还可能在？你怎么收？</li>
+          <li>50/500 压测你看哪些指标，出现 408/500 怎么分类？</li>
+          <li>为什么评估了 E2B 还要换方案？</li>
+          <li>这段经历怎么用到非沙箱的基础架构组？</li>
+        </ol>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© shenshuo-maker · 静态站点 · 版权与许可说明可自行在仓库中补充</p>
+    <footer>
+      <p>沈硕 · AI Infra · <a href="mailto:abc300739@qq.com">abc300739@qq.com</a></p>
     </footer>
-
-    <script src="assets/app.js" defer></script>
   </body>
 </html>
