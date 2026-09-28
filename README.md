@@ -1,6 +1,11 @@
 # tech-blog
 
-个人技术博客静态站点：展示简介、文章与 **GitHub 公开仓库列表**（浏览器调用 GitHub API，失败时使用内置列表）。
+<p>
+  <img src="https://img.shields.io/badge/Pages-静态站-15262F?style=for-the-badge" alt="pages">
+  <img src="https://img.shields.io/badge/GitHub_API-仓库列表-B4532A?style=for-the-badge" alt="api">
+</p>
+
+个人技术博客静态站点：展示简介、文章与 **GitHub 公开仓库列表**（浏览器调用 GitHub API，失败时使用内置列表）。主仓库请看 [sandbench](https://github.com/shenshuo-maker/sandbench) 与 [profile](https://github.com/shenshuo-maker)。
 
 ## 本地预览
 
